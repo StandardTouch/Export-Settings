@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "export_setting"
+version = "0.0.1"
+description = "This App Used to Set preselected fields for export"
+authors = [
+    { name = "zaid", email = "zaid@standardtouch.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.frappe]
+app_name = "export_setting"
+app_title = "Export Setting"
+app_publisher = "zaid"
+app_description = "This App Used to Set preselected fields for export"
+app_icon = "octicon octicon-file-directory"
+app_color = "grey"
+app_email = "zaid@standardtouch.com"
+app_license = "MIT"
